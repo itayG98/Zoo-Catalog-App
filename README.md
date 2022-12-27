@@ -15,7 +15,7 @@ This Asp.NetCore web app demonstrates MVC pattern and microservices separation :
 - netwrok bridge called petshop-bridge
 
 
-This app includes Docker-file and Docker-Compose which works with images which i published 
+This app includes Docker-file and Docker-Compose which works with images that i already published 
 ### application Server :
 `
 docker pull itayg98/zoo-app:1.2
@@ -24,6 +24,8 @@ docker pull itayg98/zoo-app:1.2
 `
 docker pull itayg98/zoo-db:1.2
 `
+It is very important to add an apropriate connecrion string using the MSSQL containers name , port and add TCP :
+https://github.com/itayG98/Zoo-Catalog-App/blob/9667d1c89c78fc38f737d6e99b26ed7c6dde34ad/Zoo-Blog-master/Zoo/appsettings.json#L9-L12
 
 ### Ready Docker-Compose.yml file
 https://github.com/itayG98/Zoo-Catalog-App/blob/e4a3254457b378365bef261e6fccbe4aff56d701/Zoo-Blog-master/docker-compose.yml#L1-L27
