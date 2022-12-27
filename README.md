@@ -22,6 +22,7 @@ docker pull itayg98/zoo-app:1.2
 docker pull itayg98/zoo-db:1.2
 `
 
+### Ready Docker-Compose.yml file
 https://github.com/itayG98/Zoo-Catalog-App/blob/e4a3254457b378365bef261e6fccbe4aff56d701/Zoo-Blog-master/docker-compose.yml#L1-L27
 
 
