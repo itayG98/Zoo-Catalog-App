@@ -1,6 +1,8 @@
 # Zoo-Blog web app
 ## Asp Net.Core MVC web app using MSSQL Docker image EF7 , Identity and Boostrap
 
+This web application is built using Asp.Net Core MVC and utilizes an MSSQL Docker image with Entity Framework 7, Identity, and Bootstrap. The app allows users to scroll through and choose animals to explore and leave comments.
+
 <p align="center" >Main catalog page where you can scroll and choose animel to explore and comment</p>
 <p align="center">
   <img width="600"  src="https://user-images.githubusercontent.com/91791115/202903498-6fb8f5dc-bd28-49b2-b7b3-53a8f4cb4667.jpg">
@@ -8,7 +10,7 @@
 
  ## About 
 
-This Asp.NetCore web app demonstrates MVC pattern and microservices separation : 
+The app demonstrates the use of the MVC pattern and separation of microservices, including:
 - Asp.NetCore MVC server micro-service which is animel catalog web application
 - MSSQL server  runs on docker images from microsoft using this command : <br/>
  `docker run -e "ACCEPT_EULA=Y" --name db --network petshop-bridge -e "MSSQL_SA_PASSWORD=1234ABCD@" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-CU14-ubuntu-20.04`
