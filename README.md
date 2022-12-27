@@ -24,7 +24,7 @@ docker pull itayg98/zoo-app:1.2
 `
 docker pull itayg98/zoo-db:1.2
 `  <br/>
-It is very important to add an apropriate connecrion string using the MSSQL containers name , port and add TCP :
+It is very important to add an apropriate connection string using the MSSQL containers name , port and add TCP :
 https://github.com/itayG98/Zoo-Catalog-App/blob/9667d1c89c78fc38f737d6e99b26ed7c6dde34ad/Zoo-Blog-master/Zoo/appsettings.json#L9-L12
 
 ### Docker-Compose.yml file
