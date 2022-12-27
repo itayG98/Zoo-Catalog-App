@@ -3,7 +3,7 @@
 
 This web application is built using Asp.Net Core MVC and utilizes an MSSQL Docker image with Entity Framework 7, Identity, and Bootstrap. The app allows users to scroll through and choose animals to explore and leave comments.
 
-<p align="center" >Main catalog page where you can scroll and choose animel to explore and comment</p>
+<p align="center" >Main catalog where you can scroll choose animel and comment</p>
 <p align="center">
   <img width="600"  src="https://user-images.githubusercontent.com/91791115/202903498-6fb8f5dc-bd28-49b2-b7b3-53a8f4cb4667.jpg">
 </p>
