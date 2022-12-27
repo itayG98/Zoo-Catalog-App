@@ -24,14 +24,14 @@ I created two custom Vlidation Attributes:
 1. Birthdate to validate the animal is less than 150 years and was born in the current day or earlier
 2. File validator to check wether if the file's content Type include the word "Image" and the size of the file limited to 10MB 
 
-https://github.com/itayG98/Zoo-Blog/blob/0a9486196c9483055d269c8b58c11fc163ce114d/Model/Models/Attributes/ImageFileValidationAttribute.cs#L11-L26
+https://github.com/itayG98/Zoo-Catalog-App/blob/4a882f107dc46814672801a49eade8df2b704d46/Zoo-Blog-master/Model/Models/Attributes/ImageFileValidationAttribute.cs#L11-L26
 
 In order to generate the categories i made an Enum helper model which is not mapped in to the DataBase but i use to generate apropriate select tag
 
 The model project contains also the data access layer  Generic base Repsoitory class for each entity whom id is of type Guid and one service of image formating which help me to save the images files as bytes array and generate the image back on the client side
   
-  https://github.com/itayG98/Zoo-Blog/blob/4cb7b9c64a162334470dfd2d8aff94882166ae09/Model/Services/ImagesFormater.cs#L29-L39
-  https://github.com/itayG98/Zoo-Blog/blob/4cb7b9c64a162334470dfd2d8aff94882166ae09/Model/Services/ImagesFormater.cs#L83-L90
+  https://github.com/itayG98/Zoo-Catalog-App/blob/4a882f107dc46814672801a49eade8df2b704d46/Zoo-Blog-master/Model/Services/ImagesFormater.cs#L29-L39
+  https://github.com/itayG98/Zoo-Catalog-App/blob/4a882f107dc46814672801a49eade8df2b704d46/Zoo-Blog-master/Model/Services/ImagesFormater.cs#L83-L90
 
 
  ## View
