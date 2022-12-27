@@ -44,7 +44,7 @@ The model project contains also the data access layer  Generic base Repsoitory c
 </p>
 
 The manager view of Create and update contain a vannila JS validation of the file type and it size in order to prevent the browser to throw an error
-https://github.com/itayG98/Zoo-Blog/blob/a257d540924d53627b48daadafc260d0006fe2c4/Zoo/wwwroot/Scripts/AnimelCreateFormValidator.js#L23-L46
+https://github.com/itayG98/Zoo-Catalog-App/blob/fa2e0fcd62d77a1b6cb19dbb7888a489544c1a89/Zoo-Blog-master/Zoo/wwwroot/Scripts/animalcreateformvalidator.js#L23-L46
 
   ## Controllers
  This project contain 4 controllers :
@@ -53,7 +53,7 @@ https://github.com/itayG98/Zoo-Blog/blob/a257d540924d53627b48daadafc260d0006fe2c
  3. Catalog - view the animals in the blog and can sort them by category
  4. Animel Data - Explore the animals details and allow the user to leave a comment. The comment posting uses Fetch api in order to prevent the page to relload each time the user post a comment.
  
-https://github.com/itayG98/Zoo-Blog/blob/4cb7b9c64a162334470dfd2d8aff94882166ae09/Zoo/wwwroot/Scripts/CommentFetch.js#L39-L53
+https://github.com/itayG98/Zoo-Catalog-App/blob/fa2e0fcd62d77a1b6cb19dbb7888a489544c1a89/Zoo-Blog-master/Zoo/wwwroot/Scripts/CommentFetch.js#L48-L64
  
  <p align="center" >Hello world comment</p>
 <p align="center">
@@ -70,7 +70,7 @@ every signed user can comment on animals in the application (including managers)
 Anonymous user can only scroll through the animels catalog page or Register/Log In.
   <p align="center" > Registering action :</p>
 <p align="center">
-https://github.com/itayG98/Zoo-Blog/blob/351696545913e0b69f2dcdddba8a264dc621e052/Zoo/Controllers/UserController.cs#L49-L74
+https://github.com/itayG98/Zoo-Catalog-App/blob/fa2e0fcd62d77a1b6cb19dbb7888a489544c1a89/Zoo-Blog-master/Zoo/Controllers/UserController.cs#L49-L74
 </p>
 
 
@@ -79,6 +79,6 @@ This web app solution includes one Xunit project of testing for the repository l
  
   <p align="center" > Test example :</p>
 <p align="center">
- https://github.com/itayG98/Zoo-Blog/blob/286b0d893b774e1f4b66acd11fe2c82d676f8170/UnitTesting/AsyncRepositoryTest.cs#L129-L144
+ https://github.com/itayG98/Zoo-Catalog-App/blob/fa2e0fcd62d77a1b6cb19dbb7888a489544c1a89/Zoo-Blog-master/UnitTesting/AsyncRepositoryTest.cs#L129-L144
 </p>
 
