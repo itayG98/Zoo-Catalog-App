@@ -10,17 +10,17 @@
 
 This Asp.NetCore web app demonstrates MVC pattern and microservices separation : 
 - Asp.NetCore MVC server micro-service which is animel catalog web application
-- MSSQL server  runs on docker images from microsoft using this command :
+- MSSQL server  runs on docker images from microsoft using this command : <br/>
  `docker run -e "ACCEPT_EULA=Y" --name db --network petshop-bridge -e "MSSQL_SA_PASSWORD=1234ABCD@" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-CU14-ubuntu-20.04`
 - netwrok bridge called petshop-bridge
 
 
 This app includes Docker-file and Docker-Compose which works with images which i published 
-### The application :
+### application Server :
 `
 docker pull itayg98/zoo-app:1.2
 `
-### The db :
+### The DB :
 `
 docker pull itayg98/zoo-db:1.2
 `
