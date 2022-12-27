@@ -1,0 +1,13 @@
+﻿@using System.Linq
+@using Model.Models
+@using System.Linq.Expressions;
+@using Model.Repositories;
+@inject AnimalRepository animelRepo
+ 
+<h2 class="text-bg-success text-center p-2">
+    Wellcome to Zoo online
+</h2>
+<div class=" container-fluid m-auto">
+
+    @await Component.InvokeAsync("Animals",animelRepo.FindTopTrending(2))
+</div>

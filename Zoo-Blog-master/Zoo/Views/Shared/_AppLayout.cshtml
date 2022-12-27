@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8">
+    <partial name="_StyleAndCript" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header>
+        @await Html.PartialAsync("_NavBar")
+    </header>
+    <div class="container-fluid justify-content-between flex-row">
+        @RenderBody()
+    </div>
+</body>
+</html>

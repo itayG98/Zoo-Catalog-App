@@ -1,0 +1,46 @@
+﻿@using Model.Models
+@using Model.Services
+
+@model Animal
+
+<div container-fluid>
+    <form method="post" class="form" enctype="multipart/form-data">
+        <h2>Update @Model.Name</h2>
+        <div class="form-group">
+
+            <div class="form-group row">
+                <label asp-for="Name" class="control-label  m-1"></label>
+                <input asp-for="Name" class="form-control text-bg-success" disabled />
+            </div>
+
+            <div class="form-group row ">
+                <label asp-for="BirthDate" class="control-label  m-1"></label>
+                <input asp-for="BirthDate" class="form-control text-bg-success" disabled />
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Description" class="control-label  m-1"></label>
+                <input asp-for="Description" class="form-control text-bg-success" disabled />
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="CategoryEnum" class="control-label m-1"></label>
+                <select asp-for="CategoryEnum" asp-items="Html.GetEnumSelectList<CategoriesEnum>()" class="select form-select text-bg-success" disabled></select>
+            </div>
+
+
+            <div class="form-group row custom-file">
+                <label asp-for="ImageFile" class="control-label  m-1 custom-input-file"></label>
+                <div class="container col-4">
+                    <img class="rounded-2 img-thumbnail img-fluid"
+                         src=@ImagesFormater.FormatRawDataToImage(Model.ImageRawData)
+                         alt="@Model.Name 's image'" />
+                </div>
+            </div>
+
+            <div class="form-group row mt-2">
+                <input type="submit" class="form-control bg-danger" value="Delete" />
+            </div>
+        </div>
+    </form>
+</div>

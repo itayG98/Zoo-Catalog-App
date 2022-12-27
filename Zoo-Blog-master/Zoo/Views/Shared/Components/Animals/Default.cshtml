@@ -1,0 +1,26 @@
+﻿@using Model.Models
+@using Model.Services
+@model List<Animal>
+
+
+<div class="container-fluid justify-content-between d-flex flex-wrap">
+    @foreach (Animal animal in Model)
+    {
+        <div class="container d-coulomn col-4 flex-row @animal.CategoryEnum.ToString() animal ">
+            <h2 class="m-auto p-2 text-center ">@animal.Name</h2>
+            <a asp-action="Index" asp-controller="AnimalData" asp-route-id=@animal.ID>
+                <img class="rounded-2 img-thumbnail img-fluid"
+                 src=@ImagesFormater.FormatRawDataToImage(animal.ImageRawData)
+                 alt="@animal.Name" />
+            </a>
+            @if (animal.Comments != null && animal.Comments.Count != 0)
+            {
+                <h3 class="h3 fw-bolder text-center"> @animal.Comments.Count() Comments</h3>
+            }
+            else
+            {
+                <h3 class="h3 fw-bolder text-center">No comments yet</h3>
+            }
+        </div>
+    }
+</div>

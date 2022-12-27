@@ -1,0 +1,53 @@
+﻿@using Model.Models
+@using Model.Services
+@using Model.Repositories
+@inject CategoryRepository categoryRepo
+
+@model Animal 
+<script src="~/scripts/animalupdateformvalidator.js"></script>
+<div container-fluid>
+<form method="post" class="form" enctype="multipart/form-data"> 
+    <h2>Update @Model.Name</h2>
+    <div class="form-group">
+
+         <div class="form-group row">
+                <label asp-for="Name" class="control-label m-1"></label>
+         <input asp-for="Name" class="form-control text-bg-success"/>
+         <span asp-validation-for="Name"></span>
+         </div>
+
+         <div class="form-group row">
+                <label asp-for="BirthDate" class="control-label m-1"></label>
+                <input asp-for="BirthDate" class="form-control text-bg-success"/>
+         <span asp-validation-for="BirthDate"></span>
+         </div>
+
+         <div class="form-group row" >
+                <label asp-for="Description" class="control-label  m-1"></label>
+         <input asp-for="Description" class="form-control text-bg-success" maxlength="200"/>
+         <span asp-validation-for="Description"></span>
+         </div>
+
+         <div class="form-group row">
+                <label asp-for="CategoryEnum" class="control-label m-1"></label>
+         <input type="hidden" asp-for=Category value=@categoryRepo.Find(Model.CategoryID) />
+         <select asp-for="CategoryEnum" asp-items="Html.GetEnumSelectList<CategoriesEnum>()" class="select form-select text-bg-success" selected=@categoryRepo.MatchGuidIdToCategoryEnum(Model.CategoryID).ToString()></select>
+         </div>     
+
+         <div class="form-group row custom-file">
+                <label asp-for="ImageFile" class="control-label m-1 custom-input-file"></label>
+         <div class="container col-4">
+                    <img class="rounded-2 img-thumbnail img-fluid" 
+                    src=@ImagesFormater.FormatRawDataToImage(Model.ImageRawData!)
+                    alt=@Model.Name/>
+         </div>
+         <input asp-for="ImageFile" class="form-control custom-file-input text-bg-success" accept="image/*"/> 
+         <span asp-validation-for="ImageFile"></span>
+         </div>
+
+        <div class="form-group row mt-2">
+        <input type="submit" class="form-control bg-primary" value="Update">   
+        </div>
+    </div>
+</form>
+</div>

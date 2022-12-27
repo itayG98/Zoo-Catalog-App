@@ -1,0 +1,35 @@
+﻿@using Model.Models
+@using Model.Services
+@using Model.Repositories
+@model List<Animal>
+<script src="~/scripts/categoryfilter.js"></script>
+<div>
+    <h2 class="text-bg-success text-center p-2">
+        Click on animal to edit
+    </h2>
+    <div class="container-fluid d-flex flex-wrap justify-content-center ">
+    @{foreach (CategoriesEnum category in CategoryRepository.GetAllEnumCategories())
+        {
+            <button class="btn btn-warning m-2">@category.ToString()</button>
+        }
+    }
+                <button class="btn btn-warning m-2 all">All categories</button>
+</div>
+    <div class="container-fluid justify-content-between d-flex flex-wrap">
+        @foreach (Animal animal in Model)
+        {
+                <div class="container d-coulomn col-4 flex-column d-flex justify-content-center animal @animal.CategoryEnum.ToString() ">
+                <h2 class="m-auto p-2 text-center ">@animal.Name</h2>
+                <a asp-action="Update" asp-controller="Manager" asp-route-id=@animal.ID>
+                    <img class="rounded-2 img-thumbnail img-fluid" 
+                    src=@ImagesFormater.FormatRawDataToImage(animal.ImageRawData)
+                    alt="@animal.Name is trending now in comments" />
+                </a>
+                <a class="btn btn-danger" asp-route-id=@animal.ID asp-action="Delete">
+                    Delete page
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
