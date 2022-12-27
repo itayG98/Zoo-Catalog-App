@@ -12,6 +12,19 @@ This Asp.NetCore web app demonstrates MVC pattern with one Layout view contains 
 I included one View-Component in order to keep the animels exploring divs more common between pages and styled using
 boostrap libary
 
+This app includes Docker-file and Docker-Compose which works with images which i published 
+### The application :
+`
+docker pull itayg98/zoo-app:1.2
+`
+### The db :
+`
+docker pull itayg98/zoo-db:1.2
+`
+
+https://github.com/itayG98/Zoo-Catalog-App/blob/e4a3254457b378365bef261e6fccbe4aff56d701/Zoo-Blog-master/docker-compose.yml#L1-L27
+
+
  ## Model (Entity Framwork Core)
  
 <p align="center" >MSSQL Diagram</p>
