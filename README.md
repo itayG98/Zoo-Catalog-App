@@ -14,7 +14,7 @@ The app demonstrates the use of the MVC pattern and separation of microservices,
 - Asp.NetCore MVC server micro-service which is animel catalog web application
 - MSSQL server  runs on docker images from microsoft using this command : <br/>
  `docker run -e "ACCEPT_EULA=Y" --name db --network petshop-bridge -e "MSSQL_SA_PASSWORD=1234ABCD@" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-CU14-ubuntu-20.04`
-- netwrok bridge called petshop-bridge
+- netwrok bridge called db-bridge
 
 
 This app includes Docker-file and Docker-Compose which works with images that i already published 
