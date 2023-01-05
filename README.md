@@ -10,8 +10,8 @@ This web application is built using Asp.Net Core MVC and utilizes an MSSQL Docke
 
  ## About 
 
-The app demonstrates the use of the MVC pattern and separation of microservices, including:
-- Asp.NetCore MVC server micro-service which is animel catalog web application
+The app demonstrates the use of the MVC pattern and including:
+- Asp.NetCore MVC server which is animel catalog web application
 - MSSQL server  runs on docker images from microsoft using this command : <br/>
  `docker run -e "ACCEPT_EULA=Y" --name db --network petshop-bridge -e "MSSQL_SA_PASSWORD=1234ABCD@" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-CU14-ubuntu-20.04`
 - netwrok bridge called db-bridge
