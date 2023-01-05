@@ -1,4 +1,4 @@
-# Zoo-Blog web app
+# Monolith Zoo-Blog web app
 ## Asp Net.Core MVC web app using MSSQL Docker image EF7 , Identity and Boostrap
 
 This web application is built using Asp.Net Core MVC and utilizes an MSSQL Docker image with Entity Framework 7, Identity, and Bootstrap. The app allows users to scroll through and choose animals to explore and leave comments.
