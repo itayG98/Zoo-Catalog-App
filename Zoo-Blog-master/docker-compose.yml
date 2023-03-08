@@ -3,7 +3,9 @@ version: '3.3'
 services:
   app:
     container_name: app
-    image: itayg98/zoo-app:1.2
+    image: itayg98/zoo-app:2.0
+    build: 
+      dockerfile: Dockerfile
     restart: always
     depends_on:
       - db
@@ -17,7 +19,7 @@ services:
     environment:
        ACCEPT_EULA : Y
        MSSQL_SA_PASSWORD : 1234ABCD@
-    image: itayg98/zoo-db:1.2
+    image: mcr.microsoft.com/mssql/server:2019-CU14-ubuntu-20.04
     restart: always
     ports:
       - "1433:1433"

@@ -3,17 +3,18 @@
 @using Model.Repositories
 
 @model List<Animal>
-<script src="~/scripts/categoryfilter.js"></script>
+<script src="~/Scripts/CategoryFilter.js"></script>
 <h2 class="text-bg-success text-center p-2">
     Our Catalog
 </h2>
 <div class="container-fluid d-flex flex-wrap justify-content-center ">
-    @{foreach (CategoriesEnum category in CategoryRepository.GetAllEnumCategories())
+    @{
+        foreach (CategoriesEnum category in CategoryRepository.GetAllEnumCategories())
         {
             <button class="btn btn-warning m-2">@category.ToString()</button>
         }
     }
-                <button class="btn btn-warning m-2 all">All categories</button>
+    <button class="btn btn-warning m-2 all">All categories</button>
 </div>
-    @await Component.InvokeAsync("Animals",Model)
+@await Component.InvokeAsync("Animals",Model)
 

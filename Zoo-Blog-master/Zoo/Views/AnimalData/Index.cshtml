@@ -5,7 +5,7 @@
     Animal currAnimal = ViewBag.Animal;
 }
 
-<script src="~/scripts/commentfetch.js"></script>
+<script src="~/Scripts/CommentFetch.js"></script>
 <p hidden id="AnimalId">@currAnimal.ID</p>
 
 <h1 class="m-auto p-2 text-center bg-success">
@@ -47,8 +47,16 @@
             }
             else
             {
-                <h4>Add @currAnimal.Name first comment</h4>
+                <h4>Add @currAnimal.Name fisrt comment</h4>
             }
+
+        }
+        else
+        {
+            <h4>Login to Add @currAnimal.Name first comment</h4>
+        }
+        @if (User.Identity!.IsAuthenticated)
+        {
 
             <form method="post">
                 <div class="from form-group">
@@ -63,6 +71,7 @@
                 </div>
             </form>
         }
+
         <div id="Comments">
         </div>
     </div>

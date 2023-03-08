@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\Scripts\animalcreateformvalidator.js" />
+    <Content Remove="wwwroot\Scripts\animalupdateformvalidator.js" />
+    <Content Remove="wwwroot\Scripts\CategoryFilter.js" />
+    <Content Remove="wwwroot\Scripts\CommentFetch.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.1" />
@@ -30,6 +37,21 @@
 
 	<ItemGroup>
 		<_ContentIncludedByDefault Remove="Views\Shared\_NavBar.cshtml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="wwwroot\Scripts\animalcreateformvalidator.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Include="wwwroot\Scripts\animalupdateformvalidator.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Include="wwwroot\Scripts\CategoryFilter.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Include="wwwroot\Scripts\CommentFetch.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 	
 </Project>
